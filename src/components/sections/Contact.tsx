@@ -163,8 +163,8 @@ export default function Contact() {
                                 <div>
                                     <div className="text-white font-medium mb-1">Visit Us</div>
                                     <p className="text-white/60">
-                                        100 Security Boulevard<br />
-                                        San Francisco, CA 94102
+                                        Poolanthara, Pothencode<br />
+                                        Kerala, IN 695589
                                     </p>
                                 </div>
                             </motion.div>

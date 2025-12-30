@@ -55,19 +55,32 @@ export default function Contact() {
         return Object.keys(newErrors).length === 0
     }
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         if (!validateForm()) return
 
         setIsSubmitting(true)
 
-        // Simulate form submission
-        await new Promise((resolve) => setTimeout(resolve, 1500))
+        try {
+            // Encode form data for Netlify
+            const form = e.currentTarget
+            const formDataEncoded = new FormData(form)
 
-        setIsSubmitting(false)
-        setIsSubmitted(true)
-        setFormData({ name: '', email: '', company: '', message: '' })
+            await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formDataEncoded as any).toString(),
+            })
+
+            setIsSubmitted(true)
+            setFormData({ name: '', email: '', company: '', message: '' })
+        } catch (error) {
+            console.error('Form submission error:', error)
+            alert('There was an error submitting the form. Please try again.')
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     const handleChange = (
@@ -211,7 +224,16 @@ export default function Contact() {
                                     </p>
                                 </motion.div>
                             ) : (
-                                <form onSubmit={handleSubmit} className="space-y-6">
+                                <form
+                                    name="contact"
+                                    method="POST"
+                                    data-netlify="true"
+                                    onSubmit={handleSubmit}
+                                    className="space-y-6"
+                                >
+                                    {/* Hidden input for Netlify form detection */}
+                                    <input type="hidden" name="form-name" value="contact" />
+
                                     {/* Name field */}
                                     <div className="floating-input">
                                         <input

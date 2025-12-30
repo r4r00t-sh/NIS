@@ -123,8 +123,8 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <div className="text-white font-medium mb-1">Email Us</div>
-                                    <a href="mailto:security@nis.com" className="text-white/60 hover:text-nis-accent transition-colors">
-                                        security@nis.com
+                                    <a href="mailto:nanmainfosolutions@gmail.com" className="text-white/60 hover:text-nis-accent transition-colors">
+                                        nanmainfosolutions@gmail.com
                                     </a>
                                 </div>
                             </motion.div>
@@ -142,8 +142,8 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <div className="text-white font-medium mb-1">Call Us</div>
-                                    <a href="tel:+1-800-SECURE" className="text-white/60 hover:text-nis-accent transition-colors">
-                                        +1-800-SECURE
+                                    <a href="tel:+917907795883" className="text-white/60 hover:text-nis-accent transition-colors">
+                                        +91 7907795883
                                     </a>
                                 </div>
                             </motion.div>

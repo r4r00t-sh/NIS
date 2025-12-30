@@ -18,7 +18,7 @@ export default function Button({
     className,
     ...props
 }: ButtonProps) {
-    const baseStyles = 'relative overflow-hidden font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2'
+    const baseStyles = 'relative overflow-hidden font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap'
 
     const variants = {
         primary: 'bg-nis-accent text-nis-bg hover:shadow-glow-lg',

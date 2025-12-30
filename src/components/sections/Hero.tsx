@@ -133,21 +133,23 @@ export default function Hero() {
                             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                             className="rounded-lg"
                         >
-                            <Button variant="primary" size="lg">
-                                Start Security Assessment
-                                <svg
-                                    className="w-5 h-5"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                    />
-                                </svg>
+                            <Button variant="primary" size="lg" className="min-w-[280px]">
+                                <span className="flex items-center gap-2">
+                                    Start Security Assessment
+                                    <svg
+                                        className="w-5 h-5 flex-shrink-0"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                        />
+                                    </svg>
+                                </span>
                             </Button>
                         </motion.div>
                         <Button variant="secondary" size="lg">

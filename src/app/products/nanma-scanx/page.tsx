@@ -127,7 +127,7 @@ export default function NanmaScanXPage() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.1 }}
-                                className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+                                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
                             >
                                 <span className="text-white">Advanced Security</span>
                                 <br />
@@ -142,7 +142,7 @@ export default function NanmaScanXPage() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.2 }}
-                                className="text-lg text-slate-400 mb-8 max-w-lg leading-relaxed"
+                                className="text-base sm:text-lg text-slate-400 mb-8 max-w-lg leading-relaxed"
                             >
                                 Nanma ScanX is a next-generation vulnerability scanner powered by the OpenVAS engine.
                                 Identify, analyze, and remediate security weaknesses across your entire infrastructure.
@@ -153,13 +153,13 @@ export default function NanmaScanXPage() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.3 }}
-                                className="flex flex-wrap items-center gap-4 mb-10"
+                                className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 mb-10"
                             >
-                                <Link href="/#contact">
+                                <Link href="/#contact" className="w-full sm:w-auto">
                                     <motion.button
                                         whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(214, 254, 59, 0.3)' }}
                                         whileTap={{ scale: 0.98 }}
-                                        className="px-8 py-4 bg-nis-accent text-slate-900 font-semibold rounded-xl flex items-center gap-2 transition-all"
+                                        className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-nis-accent text-slate-900 font-semibold rounded-xl flex items-center justify-center gap-2 transition-all"
                                     >
                                         Get Early Access
                                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -170,7 +170,7 @@ export default function NanmaScanXPage() {
                                 <motion.button
                                     whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.1)' }}
                                     whileTap={{ scale: 0.98 }}
-                                    className="px-8 py-4 border border-slate-700 text-white font-medium rounded-xl transition-all"
+                                    className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-slate-700 text-white font-medium rounded-xl transition-all text-center"
                                 >
                                     Book a Demo
                                 </motion.button>
@@ -203,10 +203,10 @@ export default function NanmaScanXPage() {
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="relative lg:scale-110 lg:translate-x-4"
+                            className="relative lg:scale-110 lg:translate-x-4 mt-8 lg:mt-0"
                         >
                             {/* Glow effect behind image */}
-                            <div className="absolute -inset-6 bg-gradient-to-r from-violet-600/20 via-nis-accent/10 to-blue-600/20 rounded-3xl blur-3xl opacity-60" />
+                            <div className="absolute -inset-4 md:-inset-6 bg-gradient-to-r from-violet-600/20 via-nis-accent/10 to-blue-600/20 rounded-3xl blur-3xl opacity-60" />
 
                             {/* Main Dashboard Image */}
                             <motion.div
@@ -223,14 +223,14 @@ export default function NanmaScanXPage() {
                                     alt="Nanma ScanX Dashboard"
                                     width={950}
                                     height={600}
-                                    className="w-full h-auto min-w-[500px]"
+                                    className="w-full h-auto"
                                     priority
                                 />
                                 {/* Overlay gradient */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#08090d]/60 via-transparent to-transparent" />
                             </motion.div>
 
-                            {/* Floating secondary card - top right */}
+                            {/* Floating secondary card - top right (hidden on mobile) */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{
@@ -241,7 +241,7 @@ export default function NanmaScanXPage() {
                                     opacity: { duration: 0.6, delay: 0.6 },
                                     y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.6 }
                                 }}
-                                className="absolute -top-8 -right-8 w-64 rounded-xl overflow-hidden border border-slate-700/50 shadow-xl shadow-black/50"
+                                className="hidden md:block absolute -top-8 -right-8 w-64 rounded-xl overflow-hidden border border-slate-700/50 shadow-xl shadow-black/50"
                                 style={{
                                     transform: 'perspective(1000px) rotateY(-10deg) rotateX(5deg)',
                                 }}
@@ -255,7 +255,7 @@ export default function NanmaScanXPage() {
                                 />
                             </motion.div>
 
-                            {/* Floating tertiary card - bottom left */}
+                            {/* Floating tertiary card - bottom left (hidden on mobile) */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{
@@ -266,7 +266,7 @@ export default function NanmaScanXPage() {
                                     opacity: { duration: 0.6, delay: 0.7 },
                                     y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.7 }
                                 }}
-                                className="absolute -bottom-10 -left-10 w-72 rounded-xl overflow-hidden border border-slate-700/50 shadow-xl shadow-black/50"
+                                className="hidden md:block absolute -bottom-10 -left-10 w-72 rounded-xl overflow-hidden border border-slate-700/50 shadow-xl shadow-black/50"
                                 style={{
                                     transform: 'perspective(1000px) rotateY(5deg) rotateX(-5deg)',
                                 }}

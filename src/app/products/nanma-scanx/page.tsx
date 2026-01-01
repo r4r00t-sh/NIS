@@ -49,8 +49,8 @@ const productImages = [
     { id: 1, src: '/NanmaScanx/1.png', alt: 'Dashboard Overview', label: 'Dashboard' },
     { id: 2, src: '/NanmaScanx/2.png', alt: 'Vulnerability Analysis', label: 'Scan Results' },
     { id: 3, src: '/NanmaScanx/3.png', alt: 'Detailed Reports', label: 'Reports' },
-    { id: 4, src: '/NanmaScanx/4.png', alt: 'Settings Panel', label: 'Settings' },
-    { id: 5, src: '/NanmaScanx/5.png', alt: 'Alert Center', label: 'Alerts' },
+    { id: 4, src: '/NanmaScanx/4.png', alt: 'Alert Center', label: 'Alerts' },
+    { id: 5, src: '/NanmaScanx/5.png', alt: 'Vulnerability List', label: 'Vuln List' },
     { id: 6, src: '/NanmaScanx/6.png', alt: 'Analytics Dashboard', label: 'Analytics' },
 ]
 
